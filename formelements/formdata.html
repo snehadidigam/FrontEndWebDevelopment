@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Page Example</title>
+</head>
+<body>
+
+	* when you submit this form method='GET' the URL submitted is:
+	file:///C:/zzzzz/FrontEndDev/Experiments/index.html?firstname=Sneha&lastname=Didigam&gender=female&country=USA&notes=%09No+notes%09
+<br>
+	* when you submit this form method='POST' the values are submitted as Form Data. We can check in inspect->Network->All. You will see formdata.html with values 
+<br>
+	* the values entered in form are sent through `name` attributes when submitted and `id` attributes are linked to label i.e, when label is clicked associated input is selected.
+
+<form method="POST">
+	<!-- we can alter the way data sent to server through method, default is 'GET'(through URL) -->
+	<fieldset>
+		
+		<label for="fname">Firstname:</label><input type="text" id="fname" name="firstname" value=""> <br>
+		
+		<label for="lname">Lastname:</label><input type="text" id="lname" name="lastname" value=""> <br>
+		
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="female">Female <br>
+
+		<label>Country:</label>
+		<select name="country">
+			<option>USA</option>
+			<option>UK</option>
+			<option>India</option>
+			<option>France</option>
+		</select>	<br>
+
+		<label>Notes:</label>
+		<textarea name="notes" cols="50" rows="2">
+		</textarea> <br>
+
+<!-- input submit only accepts string values n attributes,whereas button accepts string wrapped in the button tag-->
+		<!-- <button type="submit">Register</button> -->
+		<input type="submit" value="Register"> 
+	</fieldset>
+</form>
+</body>
+</html>
